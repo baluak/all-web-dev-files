@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Form Events :</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+  <script src='CDN-file-3.7.1.min.js'></script>
+  <style>
+    #mf {
+      font-size: 150%;
+      margin-left: 50px;
+    }
+
+    h1 {
+      margin-left: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>jquery form events :</h1>
+  <br>
+
+  <form id="mf" action="">
+    <label for="fname">First Name :</label>
+    <input type="text" id="fname" name="fname">
+    <br><br>
+
+    <label for="mname">Midlle Name :</label>
+    <input type="text" name="mname" id="mname">
+    <br><br>
+
+    <label for="lname">Last name :</label>
+    <input type="text" name="lname" id="lname">
+    <br><br>
+
+
+
+    <label for="country">country...</label>
+    <select name="country" id="country">
+      <option id="hd" value="">select :</option>
+      <option value="japan">japan</option>
+      <option value="america">america</option>
+      <option value="london">london</option>
+      <option value="koria">koria</option>
+      <option value="india">india</option>
+    </select>
+    <br><br>
+
+    <button type="submit" id="submit">submit :</button>
+  </form>
+</body>
+<script>
+  //to change the select text to none on click
+  $(document).ready(function () {
+    $("#country").click(function () {
+      $("#hd").text("");
+    });
+
+    //to hide the select option on click 
+    $("#country").click(function () {
+      $("#hd").hide();
+    });
+  })
+</script>
+<br>
+<hr>
+
+
+
+
+
+<h1>Form events :</h1>
+<h3>focus() method :</h3>
+<p>focus() controls behavior when we working or giving input on the element :</p>
+
+<script>
+  //it makes background color lightgrey :
+  $(document).ready(function () {
+    $("#fname,#mname,#lname").focus(function () {
+      $(this).css({ "color": "blue", "background-color": "lightgreen" })
+    })
+
+
+
+
+    $("body").append("<h1><hr></h1>");
+    $("body").append("<h1>blur() method:</h1>");
+    // we can use above 2 line method, when we need write somthing by html tags, between the jquery codes.
+
+
+
+
+    //when focus makes input box bg color grey on click, when u click on next box rest of the boxes should have no color :
+    $("#fname,#mname,#lname").blur(function () {
+      $(this).css("background-color", "");
+    });
+
+
+
+
+
+    //we use change() method only to change the behaviar of the select drop downlist. 
+    $("country").change(function () {
+      $(this).css("background-color", "green")
+    })
+
+
+
+
+    //select event is only for the inputs, it controls the behaviar of the inputs, when the user selects the text inside the input box by cursor, for copy or delete,     (it changes the backgroud color) try to copy by mouse.
+    $("#fname,#mname,#lname").select(function () {
+      $(this).css("background-color", "red")
+    })
+
+
+
+
+
+    //we can controll the behaviar whole form and sumit button, when the user clicks on submit button, we get alert as your form has been submitted.ofter submitted we get display the empty form again. and we can do more things.
+    $("#mf").submit(function(){
+      alert("your form has been submitted successfully")
+    })
+
+
+    
+    // $("#lname").dblclick(function(){
+    //   $(this).css("width","250px")
+    // })
+
+
+    // $("#fname,#mname,#lname,#country,#submit").mouseenter(function(){
+    //   $(this).css("background-color","yellow")
+    // })
+
+
+    // $("#fname,#mname,#lname,#country,#submit").mouseleave(function(){
+    //   $(this).css("background-color","white")
+    // })
+
+  })
+</script>
+
+
+
+
+</html>

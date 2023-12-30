@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Page Title</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='Mouse Events.css'>
+
+  <!-- <script src="CDN-file-3.7.1.min.js"></script> -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <style>
+    table td {
+      border: 0 solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>What are events : ?</h2>
+  <h3>all different visitors action that a web page can respond to called events:</h3>
+  <br>
+  <h2>Examples :</h2>
+  <h3>
+    <ul>
+      <li>moving a mouse over an element </li>
+      <li>selecting a radio button :</li>
+      <li>clicking element :</li>
+    </ul>
+  </h3>
+  <hr>
+  <hr>
+  <h1>List of events :</h1>
+
+  <div id="uo">
+    <table id="mhed">
+      <tr id="hed">
+        <td>Mouse Events :</td>
+        <td>Keyboard Events :</td>
+        <td>Form Events :</td>
+        <td>Document / Window Events ;</td>
+      </tr>
+
+
+      <tr>
+        <td>click()</td>
+        <td>keypress()</td>
+        <td>submit()</td>
+        <td>load()</td>
+      </tr>
+
+
+      <tr>
+        <td>dbclick()</td>
+        <td>keydown()</td>
+        <td>change()</td>
+        <td>resize()</td>
+      </tr>
+
+
+      <tr>
+        <td>mouseenter()</td>
+        <td>keyup()</td>
+        <td>focus()</td>
+        <td>scroll()</td>
+      </tr>
+
+
+      <tr>
+        <td>mouseleave()</td>
+        <td></td>
+        <td>blur()</td>
+        <td>unload()</td>
+      </tr>
+    </table>
+  </div>
+  <hr>
+  <hr>
+
+</body>
+  <h1 style="text-decoration: underline;">mouse events :</h1>
+  <h2>click() method :</h2>
+  <button id="ok">Click To Subscribe :</button>
+
+  <script>
+    $(document).ready(function () {
+      $("#ok").click(function () {
+        $(this).css('color', 'red');
+      })
+    });
+  </script>
+<br><hr><hr>
+
+
+
+
+<h2>dbclick() method :</h2>
+<button id="db">Click To Subscribe :</button>
+<script>
+$("#db").dblclick(function(){
+$("#db").css("background-color","blue");
+});
+</script>
+<br><hr><hr>
+
+
+
+
+
+
+
+<h2>mouseenter() method :</h2>
+<button id="me">Click To Subscribe :</button>
+<script>
+$("#me").mouseenter(function(){
+  $("#me").css("font-style","italic");
+});
+</script>
+<br><hr><hr>
+
+
+
+
+
+
+<h2>mouseleave() method :</h2>
+<button id="ml">Click To Subscribe :</button>
+<script>
+  $("#ml").mouseleave(function(){
+    $("#ml").text("ha ha mouse is out");
+      });
+</script>
+</html>

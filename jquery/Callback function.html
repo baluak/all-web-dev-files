@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Jquery Callback function :</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <h1>Jquery Callback function :</h1>
+  <h4>javsScript statements are executes line by line, with effects, the next line of code can be run even though the effect is not finished. this can create errors.br</h4><br>
+  <h3>To prevent this, you can create a call back function.</h3><br>
+  <h3>a call back function is executes after the current effect is finished.</h3><br>
+<h3>Typical syntax : $(selector).hide(speed,callback);</h3>
+
+
+
+
+<!-- <button>hide :</button>
+<script>
+  
+  // we have used call back function : 
+
+  $(document).ready(function(){
+  $("button").click(function(){
+    $("h3,h4,h1").hide("slow",function(){
+      alert("callback function")
+    })
+  })
+})
+</script> -->
+<HR><HR></HR></HR>
+
+
+
+
+
+
+
+
+<h2>without call back function</h2>
+<button>hide :</button>
+<script>
+  // without call back function. we have NOT used call back function : 
+
+//   $(document).ready(function(){
+//   $("button").click(function(){
+//     $("h3,h4,h1").hide("slow")
+//       alert("callback function")
+    
+//   })
+// })
+</script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Stop method :</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <style>
+    #bu {
+      font-weight: bold;
+      height: 30px;
+      font-size: larger;
+      border-radius: 20px;
+      background-color: tomato;
+    }
+
+    #ann {
+      width: 50px;
+      height: 50px;
+      background-color: blue;
+      position: absolute;
+      margin: 0;
+    }
+
+    #but {
+      font-weight: bold;
+      height: 30px;
+      font-size: larger;
+      border-radius: 20px;
+      background-color: tomato;
+    }
+
+    #anna {
+      width: 50px;
+      height: 50px;
+      background-color: blue;
+      position: absolute;
+      margin: 0;
+
+    }
+
+    #st {
+      background-color: aqua;
+      font-size: large;
+      font-weight: bold;
+    }
+
+    #scrob {
+      background-color: aqua;
+      font-size: large;
+      font-weight: bold;
+    }
+
+    #stb {
+      background-color: red;
+      font-size: large;
+      font-weight: bold;
+    }
+
+
+
+
+    #fh2 {
+      width: 500px;
+      background-color: yellow;
+      height: fit-content;
+      font-size: 30px;
+      text-align: center;
+      margin-bottom: 0;
+      border-radius: 10px;
+
+    }
+
+    #sech2 {
+      width: 500px;
+      background-color: blueviolet;
+      height: 60px;
+      margin-top: 0;
+      font-size: 30px;
+      text-align: center;
+      padding-top: 15px;
+      border-radius: 10px;
+      /* display: none; */
+
+    }
+  </style>
+
+</head>
+
+<body>
+  <h1>Stop method can stop any running animations. and functions :</h1>
+
+
+  <button id="bu">click here to animate :</button><br><br>
+
+  <!-- below line is a stop button, it can stop animate -->
+  <button id="st">click to stop:</button><br><br>
+
+  <div id="ann"></div><br><br><br><br><br><br>
+  <script>
+    $(document).ready(function () {
+
+      $("#bu").click(function () {
+        $("#ann").animate({
+          left: "250px"
+
+
+
+        }, 5000);                            //duration
+
+      });
+      $("#st").click(function () {                          // it can stop the animate when u click the button :
+        $("#ann").stop();
+      })
+
+    });
+  </script>
+  <hr>
+  <hr>
+
+
+
+
+
+
+  <h3>another example for Stop method :</h3>
+
+  <button id="scrob">click to slide :</button>&nbsp&nbsp&nbsp&nbsp&nbsp
+  <button id="stb">click to stop :</button>
+  <h2 id="fh2">click here to see :</h2>
+  <h2 id="sech2">nice your learnign jquery :</h2>
+
+  <script>
+    $(document).ready(function () {
+      $("#sech2").hide();              //it will before slide
+      $("#scrob").click(function(){
+        $("#sech2").slideDown(2000);
+      })
+
+      $("#stb").click(function(){
+        $("#sech2").stop();
+      })
+    })
+  </script>
+</body>
+
+</html>

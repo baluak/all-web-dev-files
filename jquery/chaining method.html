@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>chaining method :</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <h1>j query chaining method :</h1>
+  <h3>j query chaining method allows us apply muliple jquery methods (commands) one by one continuesly on same element :</h3>
+  <h3>to get done this you dont need to use or  write any special keyword.you simply append the one by one, EXAMPLE :(css("background-color","yellow").
+    slideUp(2000).slideDown(2000);)</h3>
+    <h3>we can make the content slideup and slideDown both one ofter one,in  single click :</h3>
+
+
+  <button>click here :</button>
+  <script>
+    $(document).ready(function(){
+      $("button").click(function(){
+        $("h1").css("background-color","yellow").
+        slideUp(3000).slideDown(1000);
+      })
+    })
+  </script>
+</body>
+</html>

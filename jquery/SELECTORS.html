@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>SELECTORS :</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
+  <script src='CDN file and LINK/CDN-file-3.7.1.min.js'></script>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      margin-left: 20PX;
+    }
+
+    table,
+    th,
+    td {
+      border: 1px solid white;
+      width: 700px;
+      border-spacing: 0;
+      height: 35px;
+    }
+
+    td {
+      font-size: 20px;
+      color: aqua;
+      text-align: center;
+    }
+
+    th {
+      color: red;
+      font-size: larger;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>in jquery we have SELECTORS</h1>
+  <table>
+    <tr>
+      <th>syntax :</th>
+      <th>discription :</th>
+    </tr>
+
+    <tr>
+      <td>$("p")</td>
+      <td>selects all p elements</td>
+    </tr>
+
+    <tr>
+      <td>$("#test")</td>
+      <td>elements with id=("test")</td>
+    </tr>
+
+    <tr>
+      <td>$(".test")</td>
+      <td>elements with class=("test")</td>
+    </tr>
+
+    <tr>
+      <td>$("*")</td>
+      <td>selects all elements :</td>
+    </tr>
+
+    <tr>
+      <td>$(this)</td>
+      <td>selects the current HTML element :</td>
+    </tr>
+
+    <tr>
+      <td>$("p:first")</td>
+      <td>selects the first p element</td>
+    </tr>
+
+    <tr>
+      <td>$("ul li : first")</td>
+      <td>selects the first li elemets of the ul</td>
+    </tr>
+
+    <tr>
+      <td>$("ul li : first-child")</td>
+      <td>selects the first li element of every ul</td>
+    </tr>
+
+  </table>
+
+  <br><br>
+  <hr>
+  <hr><br><br>
+
+  <h2>P TAG SELECTING :</h2>
+
+  <button> click here hide :</button>
+  <button class="sss">click here to show :</button>
+  
+  <p>first paragraph :</p>
+  <p id="sec">second paragraph :</p>
+  <p class="set">third paragraph :</p>
+
+  <script>
+    //P SELECTORE  hide method:
+
+    $(document).ready(function () {
+
+      $("button").click(function () { $("p").hide() })
+
+      //id and class selectore, show method :
+      $(".sss").click(function(){$("p").show()})
+
+    })
+</script>
+<hr>
+
+
+
+
+
+
+
+
+
+<h2>$("*") if we put * instead of p can, it can hide all elements from the page :</h2>
+<br><hr>
+
+
+
+
+
+
+
+
+
+
+
+<h2>$("ul li: first")</h2>
+<button id="ul_li">click here to hide first li of ul:</button>
+<ul>
+  <li>samsung</li>
+  <li>sony</li>
+</ul>
+<ul>
+  <li>lenovo</li>
+  <li>dell</li>
+</ul>
+<script>
+$("#ul_li").click(function(){$("ul li:first").hide()})
+</script>
+<br><hr>
+
+
+
+
+
+
+
+
+
+
+
+<h2>$("ul li : first-child")	</h2>
+<button id="rose">click here :</button>
+  <h4>
+    <li>samsung</li>
+    <li>sony</li>
+  </h4>
+  <h4>
+    <li>lenovo</li>
+    <li>dell</li>
+  </h4>
+  <script>
+  $(document).ready(function(){
+    $("#rose").click(function(){
+      $("h4 li:first-child").hide()
+    })
+  })
+</script>
+<br><hr>
+
+
+
+
+
+<h2>$("p:first")</h2>
+<!-- its targets the first p element on from entire document -->
+<button id="fp">click here to hide first p element</button>
+<div id="door">
+  <p>number one </p>
+  <p>number two</p>
+  <p>number three</p>
+</div>
+
+<script>
+  $(document).ready(function(){
+  $("#fp").click(function(){$("#door p:first").hide()})
+})
+</script>
+<br><hr>
+
+
+
+
+
+
+
+
+<h2>$(this)</h2>
+</body>
+<button class="myButton">Click me</button>
+
+<script>
+  $(document).ready(function () {
+    $(".myButton").click(function () {
+      // 'this' inside the click function refers to the button that was clicked
+      $(this).css("background-color", "red");
+      //below line is for alert, effect applys after the alert shows :
+      alert("Button text: " + $(this).text());
+    });
+  });
+</script>
+</html>

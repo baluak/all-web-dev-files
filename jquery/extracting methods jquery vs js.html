@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>extracting methods onclick: jquery vs java script. :</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<h1>extracting methods onclick: jquery vs java script. :</h1>
+
+  <h3>js method:</h3>
+  <button id="but">CLICK HERE:</button>
+  <p id="output"></p>
+
+  <script>
+
+    document.getElementById("but").addEventListener("click", function () {
+      love();
+    });
+
+
+
+    function love() {
+      document.getElementById("output").innerHTML = ("i love j query")    // we have used innerHTML method here.
+    }
+
+  </script>
+  <hr>
+  <hr>
+
+
+
+
+  <h3>j query method:</h3>
+
+  <button id="butj">click here</button>
+  <p id="out2"></p>
+
+
+  <script>
+    $(document).ready(function () {
+
+      $("#butj").click(function () {
+        jqu()
+
+      })
+
+
+      function jqu() {
+
+        $("#out2").text("hjahfdjshjhgjk")           // here we use text method here for add value as string output.
+      }
+    })
+  </script>
+
+
+</body>
+
+</html>

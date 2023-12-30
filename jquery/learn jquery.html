@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    p {
+      border: 1px solid black;
+      width: fit-content;
+      padding: 5px;
+      font-size: 30px;
+      color: blue;
+      margin-top: 0px;
+    }
+
+    body {
+      margin-left: 50px;
+      background-color: aquamarine;
+    }
+
+    h6 {
+      font-size: 20px;
+      color: brown;
+      margin-bottom: 5px;
+      text-decoration: underline;
+
+    }
+
+    #output_1 {
+      font-style: italic;
+    }
+
+    #output_2 {
+      font-family: bold;
+    }
+
+    #output_3 {
+      font-family: Algerian;
+    }
+
+    #output_4 {
+      font-family: Arial;
+    }
+
+    #output_5 {
+      font-family: Freestyle Script;
+    }
+
+    h2 {
+      color: tomato;
+    }
+
+    input {
+      height: 25px;
+      color: blue;
+      font-size: 20px;
+    }
+
+    button {
+      font-size: large;
+      font: bold;
+      padding: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Type here something :</h2>
+  <input type="text" name="" id="love">&nbsp &nbsp &nbsp &nbsp
+  <hr>
+
+
+
+
+  <h6>ittalic :</h6>
+  <p id="output_1"></p>
+  <hr>
+  <h6>bold :</h6>
+  <p id="output_2"></p>
+  <hr>
+  <h6>Algerian :</h6>
+  <p id="output_3"></p>
+  <hr>
+  <h6>Arial</h6>
+  <p id="output_4"></p>
+  <hr>
+  <h6>Freestyle Script</h6>
+  <p id="output_5"></p>
+  <hr>
+
+  <script>
+
+    
+    function fonts() {
+      let input_val = document.getElementById('love').value;
+      document.getElementById('output_1').innerText=input_val;
+      document.getElementById('output_2').innerText=input_val;
+      document.getElementById('output_3').innerText=input_val;
+      document.getElementById('output_4').innerText=input_val;
+      document.getElementById('output_5').innerText=input_val;
+      setTimeout(fonts, 500);
+    }
+    fonts();
+  </script>
+</body>
+
+</html>

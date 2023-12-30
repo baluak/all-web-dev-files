@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>width, height in jquery</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      margin-left: 20px;
+    }
+
+    #box {
+      width: 600px;
+      height: fit-content;
+      border: 2px solid green;
+      padding: 10px;
+      background-color: black;
+      color: white;
+    }
+
+    #box2 {
+      background-color: aqua;
+      border: 2px solid green;
+      width: 270px;
+      height: 250px;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+  <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="box">
+    <h1>width, height in jquery</h1>
+    <h2>we have multiple alocated methods in width and height like below:</h2>
+    <ul>
+      <li>width()</li><br>
+      <li>innerwidth()</li><br>
+      <li>outerwidth()</li><br>
+      <li>height()</li><br>
+      <li>innerheight()</li><br>
+      <li>outerheight()</li>
+    </ul>
+  </div><br>
+
+
+  <div id="box2"></div><br>
+  <button>click here :</button>
+
+  <script>
+    $(document).ready(function () {
+
+      $("button").click(function () {
+        let txt = "";
+        txt += "width of content  " +
+          $("#box").width() + "<br>"+"<br>"
+
+        txt += "height of content  " +
+          $("#box").height() + "<br>"+"<br>";
+
+
+        txt += "inner width of div is " +
+          $("#box").innerWidth() + "<br>"+"<br>";
+
+
+        txt += "outer width of the div is " +
+          $("#box").outerWidth() + "<br>"+"<br>";
+
+
+        txt += "inner height of the div is " +
+          $("#box").innerHeight() + "<br>"+"<br>";
+
+
+        txt += "outer height of the div is " +
+          $("#box").outerHeight();
+
+
+          //this will give the html output :
+        $("#box2").html(txt);
+      })
+    })
+  </script>
+  
+
+  <h4>in above code we have two div boxes, and wee trying to figure out the first box (#box) demensions</h4>
+  <h4>and the #box one details has to in #box2 </h4>
+</body>
+
+</html>
